@@ -1,0 +1,68 @@
+<!-- Modernizr -->
+<script src="static/groundwork/js/libs/modernizr-2.6.2.min.js"></script>
+<!-- framework css -->
+<!--[if gt IE 9]><!-->
+<link type="text/css" rel="stylesheet" href="static/groundwork/css/groundwork.css">
+<!--<![endif]-->
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" href="static/groundwork/css/groundwork-core.css">
+<link type="text/css" rel="stylesheet" href="static/groundwork/css/groundwork-type.css">
+<link type="text/css" rel="stylesheet" href="static/groundwork/css/groundwork-ui.css">
+<link type="text/css" rel="stylesheet" href="static/groundwork/css/groundwork-anim.css">
+<link type="text/css" rel="stylesheet" href="static/groundwork/css/groundwork-ie.css">
+<![endif]-->
+
+
+<body class="animated fadeIn">
+<div class="animated fadeInUpBig row box asphalt">
+    <a href="#">
+    <div class="animated slideInLeft one third pad-bottom">
+    <img src="static/images/me.jpg" height="100" width="100">
+    </div>
+    <div class="one third">
+    <h1 class="animated slideInLeft align-center">
+        <strong>Michael Gibbs</strong>
+    </h1>
+    <p class="animated slideInRight align-center"><em>Full Stack Python</em></p>
+
+    </div>
+    </a>
+    <div>
+    <nav class="animated slideInRight nav asphalt ten twelfths skip-one ">
+        <ul>
+            <li><a class="button" href="http://pythonundertheinfluence.com" title="Read my blog">Blog</a></li>
+            <li><a class="button" href="https://www.youtube.com/channel/UCTJnDx3LYGwjyPubknsaRWg"
+            title="My videos">YouTube</a></li>
+            <li><button title="The big snake">Python</button></li>
+            <li><button title="Not as small as you think">Flask</button></li>
+            <li><button title="Knowledge is power">Scraping</button></li>
+            <li><button title="Ugly but effective">Kivy</button></li>
+            <li><button title="Is there another OS?">Linux</button>
+            <li><button title="Little Bobby Tables">SQL</button>
+
+        </ul>
+    </nav>
+    </div>
+</div>
+
+<div class="row">
+    <div class="animated slideInLeft column one third">
+
+    </div>
+    <div class="animated fadeInUpBig column one third">
+        <div class="align-center">
+        <img src="static/images/python-logo.png" class="double-pad-top">
+        </div>
+        {% block content %}
+
+        {% endblock content %}
+    <div class="animated slideInRight column one third">
+    </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript" src="static/groundwork/js/libs/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="static/groundwork/js/groundwork.all.js"></script>
+</body>
