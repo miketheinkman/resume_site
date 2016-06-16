@@ -18,3 +18,15 @@ def render_python():
 @app.route('/about')
 def render_about():
     return render_template('about.html')
+
+
+@app.route('/flask')
+def render_flask():
+    return render_template('flask.html')
+
+
+@app.route('/scraping')
+def render_scraping():
+    return render_template('scraping.html')
+
+
