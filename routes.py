@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template
 
 
 app = Flask(__name__)
@@ -30,3 +30,16 @@ def render_scraping():
     return render_template('scraping.html')
 
 
+@app.route('/kivy')
+def render_kivy():
+    return render_template('kivy.html')
+
+
+@app.route('/linux')
+def render_linux():
+    return render_template('linux.html')
+
+
+@app.route('/my_contribution')
+def render_my_contribution():
+    return render_template('my_contribution.html')
