@@ -46,6 +46,11 @@ def render_my_contribution():
     return render_template('my_contribution.html')
 
 
+@app.route('/sql')
+def render_sql():
+    return render_template('sql.html')
+
+
 @app.route('/api')
 def render_api():
     return render_template('api.html')
@@ -54,3 +59,5 @@ def render_api():
 @app.route('/api/weather/<zipcode>')
 def serve_weather_json(zipcode):
     return jsonify(weather_by_zip(zipcode))
+
+

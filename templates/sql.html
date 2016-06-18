@@ -1,0 +1,28 @@
+{% extends 'template.html' %}
+
+{% block content %}
+
+<div>
+    <h1 class="align-center">
+        SQL
+    </h1>
+    <p>
+        I frequently deal with SQL when building apps. Optimized relational databases are far superion to flat files
+        for storage and retrieval of data. For prototyping and mobile apps, I tend to use SQLite, as it is a Python
+        built in, and the db will initialize itself on the first run of the application. When a full db server is
+        needed, I prefer PostgreSQL, but for the most part SQL is SQL, and I can make it work.
+    </p>
+    <p>
+        I am certainly much more a database user than a database administrator. I can properly
+        configure a database server to suit just about any need, but since I don't do it often, I only feel comfortable
+        doing so after I spend a fair amount of time reading docs to freshen up.
+    </p>
+    <p>
+        I fully understand the importance of sanitizing SQL input in case somebodies user ID is '12345 or 1=1' or on
+        the off chance that someone is named 'Mike; DROP TABLE Receivables'. Injection is a very real threat in
+        production databases, and it is important to use parameterization or blacklist special characters before
+        running any SQL on any database that actually matters.
+    </p>
+</div>
+
+{% endblock content %}
