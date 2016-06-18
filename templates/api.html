@@ -1,0 +1,25 @@
+{% extends 'template.html' %}
+
+{% block content %}
+
+<div>
+    <h1 class="align-center">
+        RESTful API
+    </h1>
+
+    <p>
+        This is a very simple API I constructed to serve some JSON. There really isn't much on the backend here,
+        I just wanted to demonstrate a simple RESTful service that I built from scratch. If needed, we could do any
+        amount of heavy lifting on the back end, crunching numbers, SQL queries and joins, or whatever else would fill
+        a need. For ease of use, I'm not using any authentication here, so you can just test the API calls with curl,
+        or just use your browser.
+    </p>
+    <h3 class="double-pad-top">Weather:</h3>
+    <p>
+        To check your local weather, you can just curl "localhost:5000/api/weather/'your zip code here'. Conversely,
+        you can just click my example link <a href="/api/weather/77573">localhost:5000/api/weather/77573</a> to get an
+        example response in the browser. You will get a JSON response for zip code you request.
+    </p>
+</div>
+
+{% endblock content %}

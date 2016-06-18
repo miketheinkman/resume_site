@@ -1,5 +1,6 @@
 #!/usr/bin/python
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
+from api import weather_by_zip
 
 
 app = Flask(__name__)
@@ -43,3 +44,13 @@ def render_linux():
 @app.route('/my_contribution')
 def render_my_contribution():
     return render_template('my_contribution.html')
+
+
+@app.route('/api')
+def render_api():
+    return render_template('api.html')
+
+
+@app.route('/api/weather/<zipcode>')
+def serve_weather_json(zipcode):
+    return jsonify(weather_by_zip(zipcode))
