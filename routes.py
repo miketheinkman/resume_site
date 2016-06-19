@@ -1,16 +1,21 @@
 #!/usr/bin/python
+"""All the url routing happens here. We need to import some things from flask, and we also import some functions
+from the api that are defined in a separate module"""
 from flask import Flask, render_template, jsonify
 from api import weather_by_zip, fibonacci
 
 
+# We define our app here, but we run it in the main.py file
 app = Flask(__name__)
 
 
+# app.route decorator routes activity to and from URLs
 @app.route('/')
 def render_home():
     return render_template('home.html')
 
 
+# Most of these functions simply render templates
 @app.route('/python')
 def render_python():
     return render_template('python.html')
@@ -36,6 +41,11 @@ def render_kivy():
     return render_template('kivy.html')
 
 
+@app.route('/kivy/example')
+def render_kivy_example():
+    return render_template('kivy_example.html')
+
+
 @app.route('/linux')
 def render_linux():
     return render_template('linux.html')
@@ -56,11 +66,13 @@ def render_api():
     return render_template('api.html')
 
 
+# Here, instead of rendering a template, we return date in JSON format
 @app.route('/api/weather/<zipcode>')
 def serve_weather_json(zipcode):
     return jsonify(weather_by_zip(zipcode))
 
 
+# Here we serve a range of Fibonacci numbers in JSON
 @app.route('/api/fibonacci/<number>')
 def serve_fibonacci(number):
     fibs = {}
