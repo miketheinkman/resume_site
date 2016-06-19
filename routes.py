@@ -1,6 +1,6 @@
 #!/usr/bin/python
 from flask import Flask, render_template, jsonify
-from api import weather_by_zip
+from api import weather_by_zip, fibonacci
 
 
 app = Flask(__name__)
@@ -61,3 +61,21 @@ def serve_weather_json(zipcode):
     return jsonify(weather_by_zip(zipcode))
 
 
+@app.route('/api/fibonacci/<number>')
+def serve_fibonacci(number):
+    fibs = {}
+    try:
+        start = int(number.split('-')[0])
+        end = int(number.split('-')[1]) + 1
+    except IndexError:
+        start = int(number)
+        end = int(number) + 1
+    except TypeError:
+        return jsonify('Invalid Entry')
+    try:
+        for i in range(start, end):
+            fibs[i] = int(fibonacci(int(i)))
+    except Exception as e:
+        print e
+
+    return jsonify(fibs)
