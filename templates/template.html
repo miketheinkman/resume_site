@@ -23,7 +23,7 @@
     <h1 class="animated slideInLeft align-center">
         <strong>Michael Gibbs</strong>
     </h1>
-    <p class="animated slideInRight align-center"><em>Full Stack Python</em></p>
+    <p class="animated slideInRight align-center"><em>Full Stack Python/DevOps</em></p>
 
     </div>
     </a>
@@ -54,31 +54,10 @@
 
 <div class="row">
     <div class="animated slideInLeft column one third double-padded">
-    <blockquote>
-        Most good programmers do programming not because they expect to get paid or get adulation by the public,
-        but because it is fun to program.
-        <cite>Linus Torvalds</cite>
-    </blockquote>
 
-        <div class="double-padded">
-         <div class="double-padded">
-            <h3>Traits of a good programmer:</h3>
-            <ul class="list">
-                <li class="tooltip" title="I love to program">Passion</li>
-                <li class="tooltip" title="New technologies excite me">Willingness to learn</li>
-                <li class="tooltip" title="I've spent plenty of time in the trenches squashing bugs">
-                    Debugging skills</li>
-                <li class="tooltip" title="I don't want to toot my own horn here, but 'toot toot'">Intelligence</li>
-                <li class="tooltip" title="Laziness is nothing but a derogatory term for resourcefulness">Laziness</li>
-            </ul>
-        </div>
-        </div>
+    {% block left %}
 
-        <div class="double-padded border-top">
-        <div class="double-padded">
-            <h3><a href="/my_contribution" title="You know you're curious">What can I contribute to your company?</a></h3>
-        </div>
-    </div>
+    {% endblock %}
 
     </div>
     <div class="animated fadeInUpBig column one third double-padded">
@@ -91,26 +70,10 @@
         {% endblock content %}
         </div>
     <div class="animated slideInRight column one third double-padded">
-    <div class="double-padded">
-        <div class="double-padded">
-            <h3><a href="/api" title="Everbody likes to REST">Check out my Flask RESTful API!</a></h3>
-        </div>
-    </div>
 
-    <div class="double-padded">
-        <div class="double-padded">
-            <h3><a href="/kivy/example">Check out my Kivy app for Android!</a></h3>
-        </div>
-    </div>
-        <blockquote>
-            Python is a truly wonderful language. When somebody comes up with a good idea it takes about 1 minute
-            and five lines to program something that almost does what you want. Then it takes only an hour to extend
-            the script to 300 lines, after which it still does almost what you want.
-            <cite>Jack Jansen</cite>
-        </blockquote>
+   {% block right %}
 
-    <div class="border-top"></div>
-
+   {% endblock right %}
 
     </div>
 

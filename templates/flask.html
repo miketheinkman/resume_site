@@ -1,5 +1,32 @@
 {% extends 'template.html' %}
 
+{% block left %}
+   <blockquote>
+       Python is fast enough for our site and allows us to produce maintainable features in record times, with a
+       minimum of developers
+        <cite>Cuong Do, Software Architect, YouTube.com</cite>
+    </blockquote>
+
+        <div class="double-padded">
+         <div class="double-padded">
+            <h3>Benefits of Flask:</h3>
+            <ul class="list">
+                <li>Speed of deployment</li>
+                <li>Customizability</li>
+                <li>Ease of use</li>
+                <li>Great community support</li>
+                <li>Great for one-offs</li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="double-padded border-top">
+        <div class="double-padded">
+            <h3><a href="/my_contribution" title="You know you're curious">What can I contribute to your company?</a></h3>
+        </div>
+    </div>
+{% endblock left %}
+
 {% block content %}
 
 <div>
@@ -40,3 +67,27 @@
 </div>
 
 {% endblock content %}
+
+{% block right %}
+
+ <div class="double-padded">
+        <div class="double-padded">
+            <h3><a href="/api" title="Everbody likes to REST">Check out my Flask RESTful API!</a></h3>
+        </div>
+    </div>
+
+    <div class="double-padded">
+        <div class="double-padded">
+            <h3><a href="/kivy/example">Check out my Kivy app for Android!</a></h3>
+        </div>
+    </div>
+        <blockquote>
+            Python plays a key role in our production pipeline. Without it a project the size of Star Wars: Episode II
+            would have been very difficult to pull off. From crowd rendering to batch processing to compositing, Python
+            binds all things together
+            <cite>Tommy Burnette, Senior Technical Director, Industrial Light & Magic</cite>
+        </blockquote>
+
+    <div class="border-top"></div>
+
+{% endblock right %}

@@ -1,5 +1,32 @@
 {% extends 'template.html' %}
 
+{% block left %}
+   <blockquote>
+        Most good programmers do programming not because they expect to get paid or get adulation by the public,
+        but because it is fun to program.
+        <cite>Linus Torvalds</cite>
+    </blockquote>
+
+        <div class="double-padded">
+         <div class="double-padded">
+            <h3>Uses for Scraping:</h3>
+            <ul class="list">
+                <li>Monitoring competitor pricing</li>
+                <li>Keep tabs on social media</li>
+                <li>Interacting with sites that do not provide an API</li>
+                <li>Automating tedious data entry</li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="double-padded border-top">
+        <div class="double-padded">
+            <h3><a href="/my_contribution" title="You know you're curious">What can I contribute to your company?
+            </a></h3>
+        </div>
+    </div>
+{% endblock left %}
+
 {% block content %}
 
 <div>
@@ -35,3 +62,27 @@
 </div>
 
 {% endblock content %}
+
+{% block right %}
+
+ <div class="double-padded">
+        <div class="double-padded">
+            <h3><a href="/api" title="Everbody likes to REST">Check out my Flask RESTful API!</a></h3>
+        </div>
+    </div>
+
+    <div class="double-padded">
+        <div class="double-padded">
+            <h3><a href="/kivy/example">Check out my Kivy app for Android!</a></h3>
+        </div>
+    </div>
+        <blockquote>
+            Python is a truly wonderful language. When somebody comes up with a good idea it takes about 1 minute
+            and five lines to program something that almost does what you want. Then it takes only an hour to extend
+            the script to 300 lines, after which it still does almost what you want.
+            <cite>Jack Jansen</cite>
+        </blockquote>
+
+    <div class="border-top"></div>
+
+{% endblock right %}
