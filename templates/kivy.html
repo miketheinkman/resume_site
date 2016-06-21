@@ -1,5 +1,31 @@
 {% extends 'template.html' %}
 
+{% block left %}
+
+<div class="double-padded">
+   <div class="double-padded">
+   <img src="{{ url_for('static', filename='images/kivy-logo.png') }}" class="center">
+</div>
+    </div>
+        <div class="double-padded border-top">
+         <div class="double-padded">
+            <h3>Benefits of Kivy:</h3>
+            <ul class="list">
+                <li>Portability</li>
+                <li>Multi-touch support</li>
+                <li>Android support</li>
+                <li>iOS support</li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="double-padded border-top">
+        <div class="double-padded">
+            <h3><a href="/my_contribution" title="You know you're curious">What can I contribute to your company?</a></h3>
+        </div>
+    </div>
+{% endblock left %}
+
 {% block content %}
 
 <div>
@@ -27,3 +53,25 @@
 </div>
 
 {% endblock content %}
+
+{% block right %}
+<div class="double-padded">
+   <div class="double-padded">
+   <img src="{{ url_for('static', filename='images/kivy-logo.png') }}" class="center">
+</div>
+    </div>
+ <div class="double-padded">
+        <div class="double-padded">
+            <h3><a href="/api" title="Everbody likes to REST">Check out my Flask RESTful API!</a></h3>
+        </div>
+    </div>
+
+
+        <blockquote>
+            Python makes us extremely productive, and makes maintaining a large and rapidly evolving codebase relatively simple
+            <cite>Mark Shuttleworth, Thawte Consulting</cite>
+        </blockquote>
+
+    <div class="border-top"></div>
+
+{% endblock right %}
