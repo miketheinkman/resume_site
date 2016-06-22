@@ -1,5 +1,21 @@
 {% extends 'template.html' %}
 
+{% block left %}
+
+<div class="double-padded">
+   <div class="double-padded">
+   <img src="{{ url_for('static', filename='images/hi.png') }}" class="center tooltip" title="Nice to meet you">
+</div>
+    </div>
+
+        <div class="double-padded border-top">
+        <div class="double-padded">
+            <h3><a href="/my_contribution" title="You know you're curious">What can I contribute to your company?
+            </a></h3>
+        </div>
+    </div>
+{% endblock left %}
+
 {% block content %}
 
 <div>
@@ -46,3 +62,26 @@
 
 
 {% endblock content %}
+
+{% block right %}
+<div class="double-padded">
+   <div class="double-padded">
+   <img src="{{ url_for('static', filename='images/wave.gif') }}" class="center dismissible tooltip" title="Click me">
+</div>
+    </div>
+ <div class="double-padded border-top">
+        <div class="double-padded">
+            <h3><a href="/api" title="Everbody likes to REST">Check out my Flask RESTful API!</a></h3>
+        </div>
+    </div>
+
+
+        <blockquote>
+            Don't lower your expectations to meet your performance. Raise your level of performance to meet your
+            expectations.
+            <cite>Ralph Marston</cite>
+        </blockquote>
+
+    <div class="border-top"></div>
+
+{% endblock right %}

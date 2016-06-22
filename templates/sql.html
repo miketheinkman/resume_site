@@ -1,5 +1,32 @@
 {% extends 'template.html' %}
 
+{% block left %}
+
+<div class="double-padded">
+   <div class="double-padded">
+   <img src="{{ url_for('static', filename='images/postgresql-logo.png') }}" class="center">
+</div>
+    </div>
+        <div class="double-padded border-top">
+         <div class="double-padded">
+            <h3>SQL Fu:</h3>
+            <ul class="list">
+                <li>Configuration</li>
+                <li>Optimization</li>
+                <li>Indexing</li>
+                <li>Conditional joins</li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="double-padded border-top">
+        <div class="double-padded">
+            <h3><a href="/my_contribution" title="You know you're curious">What can I contribute to your company?</a></h3>
+        </div>
+    </div>
+{% endblock left %}
+
+
 {% block content %}
 
 <div>
@@ -18,7 +45,7 @@
         doing so after I spend a fair amount of time reading docs to freshen up.
     </p>
     <p>
-        I fully understand the importance of sanitizing SQL input in case somebodies user ID is '12345 or 1=1' or on
+        I fully understand the importance of sanitizing SQL input in case somebody's user ID is '12345 or 1=1' or on
         the off chance that someone is named 'Mike; DROP TABLE Receivables'. Injection is a very real threat in
         production databases, and it is important to use parameterization or blacklist special characters before
         running any SQL on any database that actually matters.
@@ -26,3 +53,26 @@
 </div>
 
 {% endblock content %}
+
+{% block right %}
+<div class="double-padded">
+   <div class="double-padded">
+   <img src="{{ url_for('static', filename='images/mysql-logo.png') }}" class="center">
+</div>
+    </div>
+ <div class="double-padded border-top">
+        <div class="double-padded">
+            <h3><a href="/api" title="Everbody likes to REST">Check out my Flask RESTful API!</a></h3>
+        </div>
+    </div>
+
+
+        <blockquote>
+PostgreSQL handles virtually all the standard SQL constructs. It is easy (relatively speaking) to administer, it is
+            fast, it is efficient, it has a great API, and it supports ODBC, why would you choose something else?
+            <cite>Mark Woodward, Mohawk Software</cite>
+        </blockquote>
+
+    <div class="border-top"></div>
+
+{% endblock right %}

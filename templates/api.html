@@ -1,5 +1,20 @@
 {% extends 'template.html' %}
 
+{% block left %}
+
+<div class="double-padded">
+   <div class="double-padded">
+   <img src="{{ url_for('static', filename='images/api.png') }}" class="center">
+</div>
+    </div>
+
+        <div class="double-padded border-top">
+        <div class="double-padded">
+            <h3><a href="/my_contribution" title="You know you're curious">What can I contribute to your company?</a></h3>
+        </div>
+    </div>
+{% endblock left %}
+
 {% block content %}
 
 <div>
@@ -29,3 +44,15 @@
 </div>
 
 {% endblock content %}
+
+{% block right %}
+<div class="double-padded">
+   <div class="double-padded">
+   <img src="{{ url_for('static', filename='images/api-icon.png') }}" class="center">
+</div>
+    </div>
+
+
+    <div class="border-top"></div>
+
+{% endblock right %}
